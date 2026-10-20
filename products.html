@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dungeons &amp; Coffee | Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Dungeons &amp; Coffee logo">
+      <span>DUNGEONS<br>&amp;<br>COFFEE</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="menu.html">Menu</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="play.html">Play</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="products-layout">
+    <section>
+      <p class="eyebrow">Discover</p>
+      <h1 class="title">Our products</h1>
+      <p class="body-text">
+        We're more than just a coffee shop! we're your portal to adventure and a treasure trove for
+        tabletop gamers. In addition to our exceptional coffee and delightful fare, we offer a vast
+        selection of Dungeons &amp; Dragons and Magic: The Gathering products to enrich your gaming journey.
+      </p>
+
+      <div class="categories">
+        <button type="button" data-target="mtg" class="active">Magic the gathering</button>
+        <button type="button" data-target="books">D&amp;D Books</button>
+        <button type="button" data-target="dice">Dice sets</button>
+        <button type="button" data-target="minis">Miniatures</button>
+      </div>
+    </section>
+
+    <section>
+      <!-- Magic: The Gathering -->
+      <div class="grid product-group active" id="mtg">
+        <div class="tile">
+          <figure><img src="images/mtg-lotr.jpg" alt="Lord of the Rings set booster"></figure>
+          <p class="caption">Set booster - Lord of the Rings <span class="price">£5</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/mtg-eldraine.jpg" alt="Wilds of Eldraine bundle"></figure>
+          <p class="caption">Bundle - Wilds of Eldraine <span class="price">£38</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/mtg-strixhaven.jpg" alt="Strixhaven theme booster"></figure>
+          <p class="caption">Theme booster - Strixhaven <span class="price">£12</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/mtg-doctorwho.jpg" alt="Doctor Who commander deck"></figure>
+          <p class="caption">Commander deck - Doctor Who <span class="price">£40</span></p>
+        </div>
+      </div>
+
+      <!-- D&D Books -->
+      <div class="grid product-group" id="books">
+        <div class="tile">
+          <figure><img src="images/book-phb.jpg" alt="Player's Handbook"></figure>
+          <p class="caption">D&amp;D - Player's Handbook <span class="price">£24.93</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/book-ravenloft.jpg" alt="Van Richten's Guide to Ravenloft"></figure>
+          <p class="caption">D&amp;D - Ravenloft <span class="price">£41</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/book-witchlight.jpg" alt="The Wild Beyond the Witchlight"></figure>
+          <p class="caption">D&amp;D - The Wild Beyond the Witchlight <span class="price">£31.72</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/book-strixhaven.jpg" alt="Strixhaven: A Curriculum of Chaos"></figure>
+          <p class="caption">D&amp;D - Strixhaven <span class="price">£44.99</span></p>
+        </div>
+      </div>
+
+      <!-- Dice sets -->
+      <div class="grid product-group" id="dice">
+        <div class="tile">
+          <figure><img src="images/dice-amethyst.jpg" alt="Smokey Amethyst dice set"></figure>
+          <p class="caption">Dice set - Smokey Amethyst <span class="price">£5</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/dice-purrfect.jpg" alt="Purrfect Polyhedral dice set"></figure>
+          <p class="caption">Dice set - Purrfect Polyhedral <span class="price">£14.29</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/dice-red.jpg" alt="Classic red dice set"></figure>
+          <p class="caption">Dice set - Classic red set <span class="price">£3.99</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/dice-wood.jpg" alt="Magic Wood dice set"></figure>
+          <p class="caption">Dice set - Magic wood <span class="price">£11.50</span></p>
+        </div>
+      </div>
+
+      <!-- Miniatures -->
+      <div class="grid product-group" id="minis">
+        <div class="tile">
+          <figure><img src="images/mini-warlock.jpg" alt="Half elf warlock miniature"></figure>
+          <p class="caption">D&amp;D miniature - Half elf warlock <span class="price">£4.97</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/mini-skeleton.jpg" alt="Frost giant skeleton miniature"></figure>
+          <p class="caption">D&amp;D miniature - Frost giant skeleton <span class="price">£14.72</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/mini-redcaps.jpg" alt="Redcaps miniature"></figure>
+          <p class="caption">D&amp;D miniature - Redcaps <span class="price">£12</span></p>
+        </div>
+        <div class="tile">
+          <figure><img src="images/mini-halfling.jpg" alt="Male halfling rogue miniature"></figure>
+          <p class="caption">D&amp;D miniature - Male halfling rogue <span class="price">£17</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Show the product group that matches the selected category
+    const buttons = document.querySelectorAll(".categories button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        document.querySelectorAll(".product-group").forEach((g) => g.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById(button.dataset.target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

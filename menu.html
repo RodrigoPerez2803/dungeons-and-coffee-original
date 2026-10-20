@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dungeons &amp; Coffee | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Dungeons &amp; Coffee logo">
+      <span>DUNGEONS<br>&amp;<br>COFFEE</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="products.html">Products</a>
+      <a href="play.html">Play</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="menu-layout">
+    <section>
+      <button class="filter-btn" id="filter-btn" type="button">Filter by: food and coffee</button>
+
+      <div class="grid">
+        <div class="tile" data-type="food">
+          <figure><img src="images/menu-fighter.jpg" alt="Fighter breakfast"></figure>
+          <p class="caption">Fighter breakfast <span class="price">£14.99</span></p>
+        </div>
+        <div class="tile" data-type="coffee">
+          <figure><img src="images/menu-barbarian.jpg" alt="Espresso"></figure>
+          <p class="caption">Barbarian rage - (espresso) <span class="price">£7</span></p>
+        </div>
+        <div class="tile" data-type="coffee">
+          <figure><img src="images/menu-wizard.jpg" alt="Wizard potion"></figure>
+          <p class="caption">Wizard potion - (chef's surprise) <span class="price">£5</span></p>
+        </div>
+        <div class="tile" data-type="food">
+          <figure><img src="images/menu-paladin.jpg" alt="Paladin soup"></figure>
+          <p class="caption">Paladin soup <span class="price">£9.99</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-intro align-right">
+      <p class="eyebrow">Learn more</p>
+      <h1 class="title">About our menu</h1>
+      <div class="body-text">
+        <p>
+          Delight yourself with a menu fit for heroes: At Dungeons &amp; Coffee, our culinary delights are
+          as tempting as the worlds you explore in your games. Our fantasy-inspired menu brings medieval
+          flavours to the present, With options for all dietary quests, our menu ensures no hero is left
+          hungry or thirsty.
+        </p>
+        <p>Delight in the extraordinary, our food is an adventure in itself!</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Cycle the filter: food and coffee -> food -> coffee
+    const filters = ["food and coffee", "food", "coffee"];
+    let current = 0;
+    const btn = document.getElementById("filter-btn");
+
+    btn.addEventListener("click", () => {
+      current = (current + 1) % filters.length;
+      const filter = filters[current];
+      btn.textContent = "Filter by: " + filter;
+      document.querySelectorAll(".tile").forEach((tile) => {
+        const show = current === 0 || tile.dataset.type === filter;
+        tile.classList.toggle("hidden", !show);
+      });
+    });
+  </script>
+</body>
+</html>
